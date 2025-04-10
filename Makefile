@@ -52,5 +52,5 @@ build: clean
 install-pipeline:
 	# Install the package
 	$(call group,Installing package)
-	uv sync --only-dev
+	uv pip install -r requirements_dev.txt
 	$(call endgroup)
