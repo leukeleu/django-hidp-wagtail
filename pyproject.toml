@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=42", "wheel", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "leukeleu-hidp-wagtail"
+requires-python = ">=3.11"
+dynamic = ["version"]
+description = "A Wagtail-themed template pack for HIdP"
+authors = [
+    { name="Wouter de Vries", email="wdevries@leukeleu.nl" }
+]
+dependencies = [
+    "hidp>=1.3.0,<1.4.0",
+]
+readme = "README.md"
+
+[project.optional-dependencies]
+dev = [
+    "build",
+    "ruff",
+]
+
+[tool.setuptools]
+packages = ["hidp_wagtail"]
+
+[tool.setuptools.package-data]
+hidp_wagtail = ["templates/hidp/*.html"]
