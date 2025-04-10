@@ -41,3 +41,10 @@ build: clean
 	$(call group,Building package)
 	python -m build --installer uv --outdir ../../var/dist
 	$(call endgroup)
+
+.PHONY: install-pipeline
+install-pipeline:
+	# Install the package
+	$(call group,Installing package)
+	uv sync --only-dev
+	$(call endgroup)

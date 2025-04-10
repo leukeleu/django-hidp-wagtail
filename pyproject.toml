@@ -15,14 +15,14 @@ dependencies = [
 ]
 readme = "README.md"
 
-[project.optional-dependencies]
-dev = [
-    "build",
-    "ruff",
-]
-
 [tool.setuptools]
 packages = ["hidp_wagtail"]
 
 [tool.setuptools.package-data]
 hidp_wagtail = ["templates/hidp/*.html"]
+
+[tool.uv]
+dev-dependencies = [
+    "build>=1.2.2.post1",
+    "ruff>=0.11.4",
+]
