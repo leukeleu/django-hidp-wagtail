@@ -1,2 +1,1 @@
-# blaat_aap/__init__.py
-default_app_config = 'hidp_wagtail.apps.HidpWagtailConfig'
+default_app_config = "hidp_wagtail.apps.HidpWagtailConfig"
