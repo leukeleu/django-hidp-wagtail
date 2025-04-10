@@ -17,4 +17,8 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      - uses: ./.github/actions/python-qa
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Linting, checks & tests
+        uses: ./.github/actions/python-qa
