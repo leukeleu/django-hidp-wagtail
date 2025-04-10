@@ -39,7 +39,7 @@ clean:
 build: clean
 	# Build the package
 	$(call group,Building package)
-	python -m build --installer uv --outdir ../../var/dist
+	python -m build --installer uv
 	$(call endgroup)
 
 .PHONY: install-pipeline
