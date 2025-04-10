@@ -1,3 +1,6 @@
+name: Python Code Quality Assurance
+description: Lint, checks & tests
+
 runs:
   using: composite
   steps:

@@ -14,4 +14,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    uses: ./.github/actions/python-qa
+    timeout-minutes: 10
+
+    steps:
+      - uses: ./.github/actions/python-qa
