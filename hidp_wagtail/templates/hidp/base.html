@@ -1,1 +1,17 @@
-Hello, this is HIdP Wagtail!
+{% load csp_nonce static %}
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/wagtail_hidp.css' %}">
+</head>
+  <body>
+  {% block body %}
+    <main>
+      {% block main %}{# Main application content #}{% endblock %}
+    </main>
+  {% endblock %}
+</body>
+</html>

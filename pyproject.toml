@@ -19,7 +19,7 @@ readme = "README.md"
 packages = ["hidp_wagtail"]
 
 [tool.setuptools.package-data]
-hidp_wagtail = ["templates/hidp/*.html"]
+hidp_wagtail = ["templates/hidp/*.html", "static/css/*.css"]
 
 [tool.ruff]
 unsafe-fixes = false
