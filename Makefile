@@ -28,6 +28,12 @@ lint:
 	ruff format --check --diff
 	$(call endgroup)
 
+.PHONY: lintfix
+lintfix:
+	# Automatically fix syntax and style issues
+	ruff check --fix-only
+	ruff format
+
 .PHONY: clean
 clean:
 	# Clean up build files
