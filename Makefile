@@ -18,7 +18,7 @@ endef
 
 
 .PHONY: test
-test: lint
+test: lint checkmanifest checksetup
 
 .PHONY: lint
 lint:
@@ -39,6 +39,20 @@ clean:
 	# Clean up build files
 	$(call group,Cleaning up)
 	rm -rf dist/*.whl dist/*.tar.gz
+	$(call endgroup)
+
+.PHONY: checkmanifest
+checkmanifest:
+	# Check if all files are included in the sdist
+	$(call group,Checking manifest)
+	check-manifest
+	$(call endgroup)
+
+.PHONY: checksetup
+checksetup: build
+	# Check metadata
+	$(call group,Checking package metadata)
+	twine check ./dist/*.whl
 	$(call endgroup)
 
 .PHONY: build
