@@ -1,8 +1,10 @@
 from django.core.checks import Error, register
 from django.conf import settings
 
+from hidp.config.checks import Tags
 
-@register()
+
+@register(Tags.settings)
 def check_wagtailadmin_login_url(app_configs, **kwargs):
     """
     Custom system check to ensure that the 'WAGTAILADMIN_LOGIN_URL' setting is configured.
