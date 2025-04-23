@@ -2,7 +2,7 @@
 
 ## Overview
 
-This package contains the HIdP templates for Wagtail.
+This package contains Wagtail-styled templates for HIdP.
 
 ## Installation
 
