@@ -33,6 +33,9 @@ It extends the base.html template and is an entrypoint for customizing the layou
             </a>
           </li>
           {% with request.resolver_match.url_name as active %}
+          <li class="{% if active == 'manage_account' %}current{% endif %}">
+            <a href="{% url "hidp_account_management:manage_account" %}">{% translate 'Manage account' %}</a>
+          </li>
           <li class="{% if active == 'edit_account' %}current{% endif %}">
             <a href="{% url "hidp_account_management:edit_account" %}">{% translate 'Edit account' %}</a>
           </li>
