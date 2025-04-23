@@ -1,7 +1,7 @@
-{% load csp_nonce static %}
-
+{% load csp_nonce i18n static %}
+{% get_current_language as LANGUAGE_CODE %}
 <!doctype html>
-<html>
+<html lang="{{ LANGUAGE_CODE }}">
 <head>
   <meta charset="utf-8">
   <title>{% block title %}{% endblock %}</title>
