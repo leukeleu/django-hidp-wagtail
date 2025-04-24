@@ -12,7 +12,7 @@ authors = [
     { name = "Wouter de Vries", email = "wdevries@leukeleu.nl" },
 ]
 dependencies = [
-    "hidp>=1.3.0,<1.4.0",
+    "django-hidp>=1.4.0,<1.5.0",
 ]
 readme = "README.md"
 license = "BSD-3-Clause"
