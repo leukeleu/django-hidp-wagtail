@@ -9,7 +9,7 @@ This package contains Wagtail-styled templates for HIdP.
 1. Install the package using pip:
 
 ```bash
-pip install leukeleu-hidp-wagtail
+pip install django-hidp-wagtail
 ```
 
 2. Add the package to your `INSTALLED_APPS` in your Django settings:
