@@ -1,0 +1,30 @@
+{
+  "template": "/Users/ramondejezus/Documents/development/docker-compose-setup",
+  "commit": "f9753259daf8bc11918e09e0c871c26822c010ac",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "_jinja2_env_vars": {
+        "lstrip_blocks": true,
+        "trim_blocks": true
+      },
+      "project_name": "Hidp Wagtail Sandbox",
+      "project_slug": "hidp_wagtail_sandbox",
+      "project_domain": "hidpwagtailsandbox.test",
+      "project_server_hostname": "atlantis.leukeleu.nl",
+      "project_git_repository": "git@github.com:leukeleu/hidp_wagtail_sandbox.git",
+      "use_drf": false,
+      "use_wagtail": true,
+      "use_vue": false,
+      "use_node": false,
+      "use_translations": true,
+      "_template": "/Users/ramondejezus/Documents/development/docker-compose-setup",
+      "_commit": "f9753259daf8bc11918e09e0c871c26822c010ac",
+      "repository_slug": "leukeleu/hidp_wagtail_sandbox"
+    }
+  },
+  "directory": null,
+  "skip": [
+    ".git"
+  ]
+}
