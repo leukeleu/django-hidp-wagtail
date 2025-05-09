@@ -1,0 +1,34 @@
+{% load static %}
+<!doctype html>
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+  <meta charset="utf-8">
+  <title>
+  {% block title %}{% if page %}{{ page.seo_title|default:page.title }}{% endif %}{% endblock %}    - Hidp Wagtail Sandbox
+  </title>
+  {% if page.search_description %}
+  <meta name="description" content="{{ page.search_description }}" />
+  {% endif %}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% if sentry_environment and sentry_dsn %}
+  <script src="{{ sentry_url }}" crossorigin="anonymous"></script>
+  {% endif %}
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'icons/apple-touch-icon.png' %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'icons/favicon-32x32.png' %}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'icons/favicon-16x16.png' %}">
+  <link rel="manifest" href="{% static 'icons/site.webmanifest' %}">
+  <link href="{% static 'css/main.css' %}" rel="stylesheet">
+  {% block extra_head %}{# Override this in templates to add CSS and JS to the head #}{% endblock %}
+</head>
+<body>
+  {% block body %}{# Override this in templates to add content #}{% endblock %}
+  {% if sentry_environment and sentry_dsn %}
+  <script>
+    Sentry.onLoad(function() {
+      Sentry.init({ environment: '{{ sentry_environment }}' });
+    });
+  </script>
+  {% endif %}
+  {% block extra_js %}{# Override this in templates to add extra JS #}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,7 @@
+# Note: Order is important; the last matching pattern takes the most precedence.
+
+# Default reviewers:
+* @leukeleu/contributors
+
+# Frontend specific reviewers (overrides default reviewers):
+# /frontend @leukeleu/contributors
