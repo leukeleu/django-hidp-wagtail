@@ -15,7 +15,7 @@ BASE_DIR = PROJECT_DIR.parent.parent
 FRONTEND_DIR = BASE_DIR / "frontend"
 
 # Shared var directory (for logs, cache, etc.)
-VAR_DIR = BASE_DIR / "var"
+VAR_DIR = BASE_DIR.parent / "var"
 
 # Read configuration from ini file
 
