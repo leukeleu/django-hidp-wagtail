@@ -6,4 +6,4 @@ django-hidp[recommended]~=1.4.0
 psycopg2-binary~=2.9.6
 sentry-sdk~=2.0
 wagtail~=6.3.3
-django-hidp-wagtail~=1.0.2
+-e ../../packages/hidp_wagtail  # Install editable
