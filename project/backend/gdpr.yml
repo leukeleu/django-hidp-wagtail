@@ -1,0 +1,53 @@
+exclude: [
+  'auth\.Group',
+  'auth\.Permission',
+  'sessions\.Session'
+]
+include: []
+models:
+  accounts.User:
+    name: Gebruiker
+    fields:
+      password:
+        name: Wachtwoord
+        description: Tekenreeks (hooguit %(max_length)s)
+        help_text: ''
+        required: true
+        pii: true
+      last_login:
+        name: Laatste Aanmelding
+        description: Datum (met tijd)
+        help_text: ''
+        required: false
+        pii: false
+      username:
+        name: Gebruikersnaam
+        description: Tekenreeks (hooguit %(max_length)s)
+        help_text: Vereist. 150 tekens of minder. Alleen letters, cijfers en de tekens
+          @/,/+/-/_ zijn toegestaan.
+        required: true
+        pii: true
+      first_name:
+        name: Voornaam
+        description: Tekenreeks (hooguit %(max_length)s)
+        help_text: ''
+        required: false
+        pii: true
+      last_name:
+        name: Achternaam
+        description: Tekenreeks (hooguit %(max_length)s)
+        help_text: ''
+        required: false
+        pii: true
+      email:
+        name: E-Mailadres
+        description: E-mailadres
+        help_text: ''
+        required: false
+        pii: true
+      date_joined:
+        name: Datum Toegetreden
+        description: Datum (met tijd)
+        help_text: ''
+        required: true
+        pii: false

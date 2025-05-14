@@ -1,7 +1,7 @@
 include Makefile
 include requirements_dev.txt
 include .editorconfig
-recursive-include docs *.md
+recursive-include hidp_wagtail *.md
 recursive-include hidp_wagtail/templates *.html *.txt
 global-exclude *.lock
 global-exclude __pycache__
