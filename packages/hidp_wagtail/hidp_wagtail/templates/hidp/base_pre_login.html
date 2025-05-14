@@ -6,3 +6,7 @@
   {{ block.super }}
   <link rel="stylesheet" href="{% static 'css/wagtail_hidp_pre_login.css' %}">
 {% endblock %}
+
+{% block messages %}
+  {% include 'hidp/messages.html' %}
+{% endblock %}
