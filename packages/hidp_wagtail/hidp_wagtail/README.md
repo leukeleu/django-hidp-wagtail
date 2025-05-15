@@ -26,3 +26,19 @@ INSTALLED_APPS = [
 ```python
 WAGTAILADMIN_LOGIN_URL = 'hidp_accounts:login'
 ```
+
+4. Add the provided `account_management_links` context_processor to your settings.py:
+
+```python
+TEMPLATES = [
+    {
+        ...
+        'OPTIONS': {
+            'context_processors': [
+                ...
+                "hidp_wagtail.context_processors.account_management_links",
+            ],
+        },
+    },
+]
+```
