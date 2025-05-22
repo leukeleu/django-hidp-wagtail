@@ -139,6 +139,7 @@ TEMPLATES = [
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
                 "hidp_wagtail_sandbox.context_processors.sentry_vars",
+                "hidp_wagtail.context_processors.account_management_links",
             ],
         },
     },
