@@ -53,6 +53,13 @@ button:hover {
   border-color: #0000;
 }
 
+button:disabled {
+  background-color: #c4c4c4;
+  border-color: #c4c4c4;
+  color: #404040;
+  cursor: not-allowed;
+}
+
 form > div {
   margin-block: 1.875rem;
 }
