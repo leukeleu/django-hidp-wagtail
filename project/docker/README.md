@@ -61,7 +61,7 @@ On startup, the `python` container will copy `./hidp_wagtail_sandbox/local.examp
 To manually configure the settings, first copy the example file:
 
 ```sh
-cp backend/hidp_wagtail_sandbox/local.example.ini hidp_wagtail_sandbox/local.ini
+cp hidp_wagtail_sandbox/local.example.ini hidp_wagtail_sandbox/local.ini
 ```
 
 Then edit the settings to your liking.

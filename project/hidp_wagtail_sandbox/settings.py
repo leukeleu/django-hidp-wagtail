@@ -11,11 +11,9 @@ PROJECT_DIR = Path(__file__).resolve().parent
 # Repository root directory
 BASE_DIR = PROJECT_DIR.parent.parent
 
-# Frontend project root directory (static files, templates, etc.)
-FRONTEND_DIR = BASE_DIR / "frontend"
 
 # Shared var directory (for logs, cache, etc.)
-VAR_DIR = BASE_DIR.parent / "var"
+VAR_DIR = BASE_DIR / "var"
 
 # Read configuration from ini file
 
@@ -128,7 +126,7 @@ TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [
-            FRONTEND_DIR / "templates",
+            str(PROJECT_DIR / "../templates"),
         ],
         "APP_DIRS": True,
         "OPTIONS": {
@@ -226,10 +224,6 @@ FILE_UPLOAD_PERMISSIONS = 0o644
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = "/static/"
-
-STATICFILES_DIRS = [
-    FRONTEND_DIR / "static",
-]
 
 if DEBUG:
     # STATIC_ROOT defaults to VAR_DIR/public/static/ in debug mode

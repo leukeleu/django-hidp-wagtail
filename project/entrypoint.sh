@@ -4,8 +4,8 @@ set -e # Exit on error
 # Make sure uv is up-to-date
 sudo python -m pip install --root-user-action=ignore -U uv
 
-_VENV="../../var/venv"
-_FROZEN_REQUIREMENTS="../../var/requirements_frozen.txt"
+_VENV="../var/venv"
+_FROZEN_REQUIREMENTS="../var/requirements_frozen.txt"
 
 if [ ! -f "${_VENV}/bin/activate" ]; then
   echo "Creating virtual environment..."
