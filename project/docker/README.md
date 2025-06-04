@@ -159,8 +159,8 @@ Several containers map local ports to internal ports.
 
 You can use these ports to connect to these applications:
 
-| Container                                | URL                           |
-|------------------------------------------|-------------------------------|
+| Container                     | URL                           |
+|-------------------------------|-------------------------------|
 | hidp_wagtail_sandbox_nginx    | <http://localhost:80/>        |
 | hidp_wagtail_sandbox_nginx    | <https://localhost:443/>      |
 | hidp_wagtail_sandbox_postgres | <postgres://localhost:54321/> |
