@@ -306,6 +306,8 @@ LOGIN_URL = "hidp_accounts:login"
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"
 
+REGISTRATION_ENABLED = True
+
 OTP_TOTP_ISSUER = "Hidp Wagtail Sandbox"
 
 # Wagtail
