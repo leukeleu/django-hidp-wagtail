@@ -136,7 +136,6 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
-                "hidp_wagtail_sandbox.context_processors.sentry_vars",
             ],
         },
     },
@@ -268,23 +267,6 @@ DEFAULT_FROM_EMAIL = config.getliteral("app", "default_from_email")
 
 # Django GDPR
 DJANGO_GDPR_YML_DIR = PROJECT_DIR.parent
-
-# Sentry
-
-SENTRY_DSN = config.getliteral("app", "sentry_dsn", fallback=None)
-SENTRY_ENVIRONMENT = config.getliteral("app", "sentry_environment")
-
-if SENTRY_DSN and SENTRY_ENVIRONMENT:
-    import sentry_sdk
-
-    from sentry_sdk.integrations.django import DjangoIntegration
-
-    sentry_sdk.init(
-        dsn=SENTRY_DSN,
-        environment=SENTRY_ENVIRONMENT,
-        integrations=[DjangoIntegration()],
-    )
-
 
 class InternalIPList:
     """
