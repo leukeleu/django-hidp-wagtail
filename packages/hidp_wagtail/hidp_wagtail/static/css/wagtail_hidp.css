@@ -53,6 +53,13 @@ button:hover {
   border-color: #0000;
 }
 
+button:disabled {
+  background-color: #c4c4c4;
+  border-color: #c4c4c4;
+  color: #404040;
+  cursor: not-allowed;
+}
+
 form > div {
   margin-block: 1.875rem;
 }
@@ -149,6 +156,42 @@ hr {
   border-radius: 0.5rem;
   margin-bottom: 1rem;
   box-shadow: 0 2px 8px rgba(255, 0, 0, 0.1);
+}
+
+.messages {
+  padding: 0;
+}
+
+.messages li {
+  list-style: none;
+  padding: 0.9rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(255, 0, 0, 0.1);
+}
+
+.messages li.error {
+  background-color: #ffe5e5;
+  border: 1px solid #ff4d4f;
+  color: #b00020;
+}
+
+.messages li.warning {
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  color: #856404;
+}
+
+.messages li.info {
+  background-color: #d1ecf1;
+  border: 1px solid #bee5eb;
+  color: #0c5460;
+}
+
+.messages li.success {
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
 }
 
 /*

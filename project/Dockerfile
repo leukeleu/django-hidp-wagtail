@@ -7,8 +7,8 @@ FROM python:$PYTHON_VERSION
 
 # Install extras packages
 RUN apt-get update && apt-get install -y \
-    sudo \
     gettext \
+    sudo \
     && rm -rf /var/lib/apt/lists/*
 
 # Install uv
@@ -20,7 +20,7 @@ RUN useradd -ms /bin/bash developer && \
 USER developer
 
 # Custom prompt to identify the container
-RUN echo 'export PS1="\u@hidp_wagtail_sandbox-python:\w$ "' >> ~/.bashrc
+RUN echo 'export PS1="\u@hidp-python:\w$ "' >> ~/.bashrc
 
 # Make sure stdout is not buffered, in order to see output in real time
 ENV PYTHONUNBUFFERED 1
@@ -39,7 +39,10 @@ RUN chmod 600 ~/.pgpass
 # Make the uv cache survive container recreation
 ENV UV_CACHE_DIR /code/var/cache/uv
 
-WORKDIR /code/project/backend
+# Make git trust the mounted repository, even when the permissions are "suspicious"
+RUN git config --global --add safe.directory /code
+
+WORKDIR /code/project
 COPY entrypoint.sh .
 
 ENTRYPOINT ["./entrypoint.sh"]
