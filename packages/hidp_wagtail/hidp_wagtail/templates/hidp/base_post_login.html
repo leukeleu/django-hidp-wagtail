@@ -33,25 +33,15 @@ It extends the base.html template and is an entrypoint for customizing the layou
             </a>
           </li>
           {% with request.resolver_match.url_name as active %}
-          <li class="{% if active == 'manage_account' %}current{% endif %}">
+          <li{% if active == 'manage_account' %} class="current"{% endif %}>
             <a href="{% url "hidp_account_management:manage_account" %}">{% translate 'Manage account' %}</a>
           </li>
-          <li class="{% if active == 'edit_account' %}current{% endif %}">
-            <a href="{% url "hidp_account_management:edit_account" %}">{% translate 'Edit account' %}</a>
-          </li>
-          <li class="{% if active == 'email_change_request' %}current{% endif %}">
-            <a href="{% url "hidp_account_management:email_change_request" %}">{% translate 'Change email address' %}</a>
-          </li>
-          <li class="{% if active == 'change_password' %}current{% endif %}">
-            <a href="{% url "hidp_account_management:change_password" %}">{% translate 'Change password' %}</a>
-          </li>
-          <li class="{% if active == 'linked_services' %}current{% endif %}">
-            <a href="{% url "hidp_oidc_management:linked_services" %}">{% translate 'Linked services' %}</a>
-          </li>
-          <li class="{% if active == 'manage' %}current{% endif %}">
-            <a href="{% url "hidp_otp_management:manage" %}">{% translate 'Two-factor authentication' %}</a>
-          </li>
           {% endwith %}
+          {% for item in account_management_links %}
+            <li{% if request.path == item.url%} class="current"{% endif %}>
+              <a href="{{ item.url }}">{{ item.text }}</a>
+            </li>
+          {% endfor %}
         </ul>
       </nav>
     </div>
