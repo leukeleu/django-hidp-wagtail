@@ -61,7 +61,7 @@ On startup, the `python` container will copy `./hidp_wagtail_sandbox/local.examp
 To manually configure the settings, first copy the example file:
 
 ```sh
-cp backend/hidp_wagtail_sandbox/local.example.ini hidp_wagtail_sandbox/local.ini
+cp hidp_wagtail_sandbox/local.example.ini hidp_wagtail_sandbox/local.ini
 ```
 
 Then edit the settings to your liking.
@@ -159,8 +159,8 @@ Several containers map local ports to internal ports.
 
 You can use these ports to connect to these applications:
 
-| Container                                | URL                           |
-|------------------------------------------|-------------------------------|
+| Container                     | URL                           |
+|-------------------------------|-------------------------------|
 | hidp_wagtail_sandbox_nginx    | <http://localhost:80/>        |
 | hidp_wagtail_sandbox_nginx    | <https://localhost:443/>      |
 | hidp_wagtail_sandbox_postgres | <postgres://localhost:54321/> |

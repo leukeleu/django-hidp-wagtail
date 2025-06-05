@@ -11,11 +11,9 @@ PROJECT_DIR = Path(__file__).resolve().parent
 # Repository root directory
 BASE_DIR = PROJECT_DIR.parent.parent
 
-# Frontend project root directory (static files, templates, etc.)
-FRONTEND_DIR = BASE_DIR / "frontend"
 
 # Shared var directory (for logs, cache, etc.)
-VAR_DIR = BASE_DIR.parent / "var"
+VAR_DIR = BASE_DIR / "var"
 
 # Read configuration from ini file
 
@@ -128,7 +126,7 @@ TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [
-            FRONTEND_DIR / "templates",
+            str(PROJECT_DIR / "../templates"),
         ],
         "APP_DIRS": True,
         "OPTIONS": {
@@ -138,7 +136,6 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
-                "hidp_wagtail_sandbox.context_processors.sentry_vars",
             ],
         },
     },
@@ -227,10 +224,6 @@ FILE_UPLOAD_PERMISSIONS = 0o644
 
 STATIC_URL = "/static/"
 
-STATICFILES_DIRS = [
-    FRONTEND_DIR / "static",
-]
-
 if DEBUG:
     # STATIC_ROOT defaults to VAR_DIR/public/static/ in debug mode
     STATIC_ROOT = Path(
@@ -275,23 +268,6 @@ DEFAULT_FROM_EMAIL = config.getliteral("app", "default_from_email")
 # Django GDPR
 DJANGO_GDPR_YML_DIR = PROJECT_DIR.parent
 
-# Sentry
-
-SENTRY_DSN = config.getliteral("app", "sentry_dsn", fallback=None)
-SENTRY_ENVIRONMENT = config.getliteral("app", "sentry_environment")
-
-if SENTRY_DSN and SENTRY_ENVIRONMENT:
-    import sentry_sdk
-
-    from sentry_sdk.integrations.django import DjangoIntegration
-
-    sentry_sdk.init(
-        dsn=SENTRY_DSN,
-        environment=SENTRY_ENVIRONMENT,
-        integrations=[DjangoIntegration()],
-    )
-
-
 class InternalIPList:
     """
     A fake list that checks if a given ip address
@@ -311,6 +287,8 @@ if DEBUG:
 LOGIN_URL = "hidp_accounts:login"
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"
+
+REGISTRATION_ENABLED = True
 
 OTP_TOTP_ISSUER = "Hidp Wagtail Sandbox"
 
