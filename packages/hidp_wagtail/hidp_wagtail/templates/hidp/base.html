@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="{% static 'css/wagtail_hidp.css' %}">
   {% endblock %}
 </head>
-  <body>
+<body>
   {% block body %}
     <main>
+      {% block messages %}{% endblock %}
+
       {% block main %}{# Main application content #}{% endblock %}
     </main>
   {% endblock %}
