@@ -1,4 +1,4 @@
-# Hidp Wagtail Sandbox development using Docker Compose
+# HIdP Wagtail Sandbox development using Docker Compose
 
 > Note that this is for **development only**, the containers spawned for
 this project are configured for development ease, not security.

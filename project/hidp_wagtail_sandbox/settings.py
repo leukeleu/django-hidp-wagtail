@@ -100,7 +100,7 @@ INSTALLED_APPS = [
     "django_otp",
     "django_otp.plugins.otp_static",
     "django_otp.plugins.otp_totp",
-    # Hidp Wagtail Sandbox
+    # HIdP Wagtail Sandbox
     "hidp_wagtail_sandbox.accounts",
 ]
 
@@ -291,7 +291,7 @@ LOGOUT_REDIRECT_URL = "/"
 
 REGISTRATION_ENABLED = True
 
-OTP_TOTP_ISSUER = "Hidp Wagtail Sandbox"
+OTP_TOTP_ISSUER = "HIdP Wagtail Sandbox"
 
 # Wagtail
 
@@ -300,7 +300,7 @@ WAGTAIL_ENABLE_UPDATE_CHECK = DEBUG
 WAGTAIL_SITE_NAME = config.getliteral(
     "app",
     "wagtail_site_name",
-    fallback="Hidp Wagtail Sandbox",
+    fallback="HIdP Wagtail Sandbox",
 )
 
 WAGTAILADMIN_BASE_URL = config.getliteral("app", "wagtailadmin_base_url")
