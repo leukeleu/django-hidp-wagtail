@@ -1,6 +1,6 @@
-# Hidp Wagtail Sandbox
+# HIdP Wagtail Sandbox
 
-The Hidp Wagtail Sandbox project.
+The HIdP Wagtail Sandbox project.
 
 ## Development
 
