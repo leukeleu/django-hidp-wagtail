@@ -117,7 +117,7 @@ MIDDLEWARE = [
     # Hello, ID Please
     "hidp.rate_limit.middleware.RateLimitMiddleware",
     "django_otp.middleware.OTPMiddleware",
-    "hidp.otp.middleware.OTPRequiredMiddleware",
+    "hidp_wagtail.middleware.OTPRequiredForWagtailAdminMiddleware",
 ]
 
 ROOT_URLCONF = "hidp_wagtail_sandbox.urls"
