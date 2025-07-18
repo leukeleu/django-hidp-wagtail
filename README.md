@@ -75,7 +75,7 @@ A Wagtail-themed template and integration pack for [Hello, ID Please (HIdP)](htt
 
 ## License
 
-BSD-3-Clause
+[BSD-3-Clause](LICENSE)
 
 ## Links
 
