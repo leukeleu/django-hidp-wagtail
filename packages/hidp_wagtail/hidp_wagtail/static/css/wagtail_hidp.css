@@ -33,7 +33,8 @@ h2 {
   font-size: 1.25rem;
 }
 
-button {
+button,
+form[action="/logout/"] button.primary {
   -webkit-font-smoothing: auto;
   -moz-appearance: none;
   background-color: hsl(180.5 100% 24.7%);
@@ -57,9 +58,11 @@ button {
   width: auto;
 }
 
-button:hover {
+button:hover,
+form[action="/logout/"] button.primary:hover {
   background-color: hsl(181.9 100% 18.4%);
   border-color: #0000;
+  color: #fff;
 }
 
 button:disabled {
@@ -108,6 +111,23 @@ form input[type="text"]:focus,
 form input[type="password"]:focus {
   border-color: #3fb9ad;
   outline: none;
+}
+
+form[action="/logout/"] button {
+  background-color: white;
+  color: hsl(180.5 100% 24.7%);
+  cursor: pointer;
+  height: auto;
+  border: none;
+  padding: 0;
+  text-decoration: underline;
+  font-weight: normal;
+  text-underline-offset: 3px;
+}
+
+form[action="/logout/"] button:hover {
+  border-color: #000;
+  color: #000;
 }
 
 /*
