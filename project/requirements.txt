@@ -4,5 +4,5 @@ leukeleu-django-checks~=1.2
 leukeleu-django-gdpr~=1.4
 django-hidp[recommended]~=1.5.0
 psycopg2-binary~=2.9.6
-wagtail~=6.3.3
+wagtail~=7.1
 -e ../packages/hidp_wagtail  # Install editable
